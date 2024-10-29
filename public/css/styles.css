@@ -1,0 +1,136 @@
+table {
+    width: 100%;
+    max-width: 600px; /* Limitar el ancho máximo */
+    margin: 20px auto; /* Centrar la tabla horizontalmente */
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold; /* Negrita para encabezados */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px; /* Aumentar el padding */
+    margin: auto;
+    max-width: 800px;
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-header h1 {
+    color: #333;
+    font-size: 26px; /* Aumentar tamaño de fuente */
+}
+
+.card-content h2 {
+    color: #444;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 22px; /* Aumentar tamaño de fuente */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold; /* Negrita para encabezados */
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 15px; /* Aumentar padding */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Aumentar espacio entre grupos de formulario */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    transition: border-color 0.3s; /* Transición para el borde */
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    border-color: #007bff; /* Cambio de color al enfocar */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    }
+}
+

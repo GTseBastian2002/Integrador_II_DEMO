@@ -1,0 +1,60 @@
+NOTAS
+
+______________________________________________________________________________________________
+
+Estructura de las tablas en la BD:
+
+-- Tabla para almacenar los datos personales del solicitante
+CREATE TABLE solicitante (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    dni VARCHAR(8) NOT NULL UNIQUE,
+    telefono VARCHAR(15),
+    email VARCHAR(100),
+    direccion VARCHAR(150)
+);
+
+-- Tabla para almacenar la información académica del solicitante
+CREATE TABLE informacion_academica (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    solicitante_id INT,
+    universidad VARCHAR(100),
+    carrera VARCHAR(100),
+    ciclo TINYINT CHECK (ciclo BETWEEN 1 AND 10),
+    FOREIGN KEY (solicitante_id) REFERENCES solicitante(id)
+);
+
+-- Tabla para almacenar la información financiera del solicitante
+CREATE TABLE informacion_financiera (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    solicitante_id INT,
+    ingresos DECIMAL(10, 2),
+    gastos DECIMAL(10, 2),
+    deudas DECIMAL(10, 2),
+    FOREIGN KEY (solicitante_id) REFERENCES solicitante(id)
+);
+
+-- Tabla para almacenar los detalles del crédito solicitado
+CREATE TABLE credito_universitario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    solicitante_id INT,
+    monto DECIMAL(10, 2) NOT NULL,
+    cuota_inicial DECIMAL(10, 2),
+    plazo INT CHECK (plazo IN (12, 24, 36, 48, 60)),
+    tea DECIMAL(5, 2),
+    seguro_porcentaje DECIMAL(5, 3),
+    seguro_desgravamen BOOLEAN,
+    FOREIGN KEY (solicitante_id) REFERENCES solicitante(id)
+);
+
+______________________________________________________________________________________________
+
+LIMPIAR BD CON EL SIGUIENTE COMANDO ;D
+
+DELETE FROM credito_universitario;
+DELETE FROM informacion_financiera;
+DELETE FROM informacion_academica;
+DELETE FROM solicitante;
+
+______________________________________________________________________________________________

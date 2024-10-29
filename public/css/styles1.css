@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+table {
+    width: 80%; /* Ajusta el ancho de la tabla */
+    margin: 20px auto; /* Centra la tabla horizontalmente */
+    border-collapse: collapse; /* Elimina los espacios entre celdas */
+    background-color: #fff; /* Color de fondo de la tabla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la tabla */
+}
+
+th, td {
+    padding: 15px; /* Espaciado interno de las celdas */
+    text-align: left; /* Alineación del texto */
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+th {
+    background-color: #007bff; /* Color de fondo de los encabezados */
+    color: white; /* Color del texto de los encabezados */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el mouse sobre una fila */
+}
+
+p {
+    text-align: center; /* Centra los párrafos */
+    font-size: 1.1em; /* Tamaño de fuente de los párrafos */
+}
+
+
+.btn-guardar {
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Efecto de transición */
+}
+
+.btn-guardar:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+}
+
+.btn-guardar:active {
+    background-color: #39843c; /* Color de fondo al hacer clic */
+}
+
+.btn-guardar:focus {
+    outline: none; /* Quitar contorno en foco */
+}
+
